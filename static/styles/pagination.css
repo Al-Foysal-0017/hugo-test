@@ -1,0 +1,43 @@
+/* {{ define "main" }}
+<div class="list">
+    <h1>Blog Posts</h1>
+    {{ range .Paginator.Pages }}
+    <div class="listItem">
+        <a href="{{ .Permalink }}">
+            <h2>{{ .Title }}</h2>
+        </a>
+        <p>{{ .Summary }}</p>
+    </div>
+    {{ end }}
+</div>
+
+<div class="pagination">
+    {{ with .Paginator.Prev }}
+    <a href="{{ .URL }}" class="prev">Previous</a>
+    {{ end }}
+    {{ range .Paginator.Pages }}
+    <span>{{ .Paginator.PageNumber }}</span>
+    {{ end }}
+    {{ with .Paginator.Next }}
+    <a href="{{ .URL }}" class="next">Next</a>
+    {{ end }}
+</div>
+{{ end }} */
+
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.pagination a {
+    text-decoration: none;
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+}
+.pagination a:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,38 @@
+{{define "main"}}
+
+
+<div class="list">
+    HomePage
+
+    <div class=""> 
+        {{ range .Pages }}
+        <div class="listItem">
+            <img src={{ .Params.image }} alt={{ .Title }} class="" loading="lazy"/>
+            <div>
+                <a href={{ .Permalink }}>
+                    <h1>{{.Title}}</h1>
+                </a>
+
+                <p>{{.Params.description}}</p>
+            </div>
+
+            <div>
+                {{ range (.GetTerms "authors") }}
+                    <a href={{.Permalink}}>{{.Name}}</a>
+                {{ end }}
+            </div>
+
+            <div>
+                {{ range (.GetTerms "categories") }}
+                    <a href={{.Permalink}}>{{.Name}}</a>
+                {{ end }}
+            </div>
+        </div>   
+    {{ end }}
+    </div>
+
+</div>
+
+
+
+{{end}}

@@ -1,0 +1,20 @@
+{{define "main"}}
+
+<div class="single">
+    Single Post
+
+    <div>
+        <h1>{{.Title}}</h1>
+        <h1>{{.Params.description}}</h1>
+        <img src={{.Params.imageBig}} alt="Big Image" />
+    </div>
+
+
+
+    {{/*  RightBar  */}}
+    <div>
+        {{partial "rightBar"}}
+    </div>
+</div>
+
+{{end}}

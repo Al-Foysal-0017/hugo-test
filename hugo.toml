@@ -1,0 +1,13 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+
+
+
+[param]
+    dateFormat = "Jan 2, 2006"
+
+
+[taxonomies]
+    category = "categories"
+    author = "authors"
